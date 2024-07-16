@@ -38,7 +38,7 @@ async function checkVisited() {
 async function getCurrentUser() {
   const result = await db.query("SELECT * FROM users");
   users = result.rows; 
-   
+
   return users.find((user) => user.id == currentUserId);
 };
 
@@ -77,6 +77,7 @@ app.post("/add", async (req, res) => {
     console.log(err);
   }
 });
+
 app.post("/user", async (req, res) => {
   if (req.body.add === "new") {
     res.render("new.ejs");
