@@ -83,6 +83,7 @@ app.post("/user", async (req, res) => {
     res.render("new.ejs");
   } else {
     currentUserId = req.body.user;
+    
     res.redirect("/");
   }
 });
