@@ -90,8 +90,7 @@ app.post("/user", async (req, res) => {
 
 });
 
-app.post("/new", async (req, res) => {
-  //Hint: The RETURNING keyword can return the data that was inserted.
+app.post("/new", async (req, res) => {  
   //https://www.postgresql.org/docs/current/dml-returning.html
   const {name, color} = req.body;
   
@@ -99,7 +98,7 @@ app.post("/new", async (req, res) => {
   const id = result.rows[0].id;
 
   currentUserId = id;
-  
+
   res.redirect("/");
 });
 
