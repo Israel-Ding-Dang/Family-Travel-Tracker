@@ -98,6 +98,7 @@ app.post("/new", async (req, res) => {
 
   currentUserId = id;
   res.redirect("/");
+  
 });
 
 app.listen(port, () => {
