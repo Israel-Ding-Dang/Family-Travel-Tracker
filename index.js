@@ -81,7 +81,8 @@ app.post("/add", async (req, res) => {
 
 app.post("/user", async (req, res) => {
   if (req.body.add === "new") {
-    res.render("new.ejs");    
+    res.render("new.ejs");  
+      
   } else {    
     currentUserId = req.body.user;
 
