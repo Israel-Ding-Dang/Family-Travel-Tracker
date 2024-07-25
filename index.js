@@ -25,7 +25,7 @@ let currentUserId = 2;
 let users = [];
 
 async function checkVisited() {
-  
+
   const result = await db.query("SELECT country_code FROM visited_countries JOIN users ON users.id = user_id WHERE user_id = $1;", [currentUserId]);
   let countries = [];
   console.log(result.rows);
@@ -65,6 +65,7 @@ app.post("/add", async (req, res) => {
 
     const data = result.rows[0];
     const countryCode = data.country_code;
+    
     try {
       await db.query(
         "INSERT INTO visited_countries (country_code, user_id) VALUES ($1, $2)",
