@@ -65,7 +65,7 @@ app.post("/add", async (req, res) => {
 
     const data = result.rows[0];
     const countryCode = data.country_code;
-    
+
     try {
       await db.query(
         "INSERT INTO visited_countries (country_code, user_id) VALUES ($1, $2)",
@@ -73,6 +73,7 @@ app.post("/add", async (req, res) => {
       );
       res.redirect("/");
     } catch (err) {
+      
       console.log(err);
     }
   } catch (err) {
