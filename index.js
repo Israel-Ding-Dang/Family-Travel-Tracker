@@ -29,6 +29,7 @@ async function checkVisited() {
   const result = await db.query("SELECT country_code FROM visited_countries JOIN users ON users.id = user_id WHERE user_id = $1;", [currentUserId]);
   let countries = [];
   console.log(result.rows);
+  
   result.rows.forEach((country) => {
     countries.push(country.country_code);    
   });
@@ -46,7 +47,7 @@ async function getCurrentUser() {
 app.get("/", async (req, res) => {
   const countries = await checkVisited();
   const currentUser = await getCurrentUser();
-  
+
   res.render("index.ejs", {
     countries: countries,
     total: countries.length,
