@@ -59,6 +59,7 @@ app.get("/", async (req, res) => {
 
 app.post("/add", async (req, res) => {
   const input = req.body["country"];
+
   const currentUser = await getCurrentUser();
 
   try {
@@ -77,7 +78,6 @@ app.post("/add", async (req, res) => {
       );
 
       res.redirect("/");
-
     } catch (err) {
       console.log(err);
     }
