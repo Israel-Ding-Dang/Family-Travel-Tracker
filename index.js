@@ -32,7 +32,8 @@ async function checkVisited() {
   console.log(result.rows);
 
   result.rows.forEach((country) => {
-    countries.push(country.country_code);    
+    countries.push(country.country_code);
+       
   });
 
   return countries;
@@ -76,7 +77,7 @@ app.post("/add", async (req, res) => {
         "INSERT INTO visited_countries (country_code, user_id) VALUES ($1, $2)",
         [countryCode, currentUserId]
       );
-      
+
       res.redirect("/");
     } catch (err) {
       console.log(err);
