@@ -62,6 +62,7 @@ app.post("/add", async (req, res) => {
   const input = req.body["country"];
 
   const currentUser = await getCurrentUser();
+  
   try {
 
     const result = await db.query(
