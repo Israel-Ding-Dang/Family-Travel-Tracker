@@ -69,7 +69,6 @@ app.post("/add", async (req, res) => {
 
     const data = result.rows[0];
     const countryCode = data.country_code;
-
     try {
       
       await db.query(
