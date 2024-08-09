@@ -34,6 +34,7 @@ async function checkVisited() {
   result.rows.forEach((country) => {
     countries.push(country.country_code);       
   });
+  
   return countries;
 }
 
