@@ -73,7 +73,7 @@ app.post("/add", async (req, res) => {
         "INSERT INTO visited_countries (country_code, user_id) VALUES ($1, $2)",
         [countryCode, currentUserId]
       );
-      
+
       res.redirect("/");
 
     } catch (err) {
@@ -85,6 +85,7 @@ app.post("/add", async (req, res) => {
 });
 
 app.post("/user", async (req, res) => {
+  
   if (req.body.add === "new") {
     res.render("new.ejs");  
   } else {      
