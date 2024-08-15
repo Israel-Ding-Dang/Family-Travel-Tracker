@@ -79,13 +79,14 @@ app.post("/add", async (req, res) => {
     } catch (err) {
       console.log(err);
     }
+    
   } catch (err) {    
     console.log(err);
   }
 });
 
 app.post("/user", async (req, res) => {
-  
+
   if (req.body.add === "new") {
     res.render("new.ejs");  
   } else {      
