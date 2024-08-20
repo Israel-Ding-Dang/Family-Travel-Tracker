@@ -52,7 +52,6 @@ app.get("/", async (req, res) => {
     total: countries.length,
     users: users,
     color: currentUser.color,
-
   });
 });
 
