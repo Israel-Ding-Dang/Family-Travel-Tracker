@@ -34,6 +34,7 @@ async function checkVisited() {
   result.rows.forEach((country) => {
     countries.push(country.country_code);           
   });  
+  
   return countries;  
 }
 
@@ -53,7 +54,8 @@ app.get("/", async (req, res) => {
     total: countries.length,
     users: users,
     color: currentUser.color,    
-  });  });
+  });  
+});
 
 app.post("/add", async (req, res) => {
   const input = req.body["country"];
