@@ -43,6 +43,7 @@ async function getCurrentUser() {
   users = result.rows; 
 
   return users.find((user) => user.id == currentUserId);
+  
 };
 
 app.get("/", async (req, res) => {
@@ -55,7 +56,7 @@ app.get("/", async (req, res) => {
     users: users,
     color: currentUser.color,    
   });  
-  
+
 });
 
 app.post("/add", async (req, res) => {
