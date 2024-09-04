@@ -55,6 +55,7 @@ app.get("/", async (req, res) => {
     users: users,
     color: currentUser.color,    
   });  
+  
 });
 
 app.post("/add", async (req, res) => {
@@ -91,7 +92,7 @@ app.post("/user", async (req, res) => {
 
     res.redirect("/");
   }
-  
+
 });
 
 app.post("/new", async (req, res) => {  
