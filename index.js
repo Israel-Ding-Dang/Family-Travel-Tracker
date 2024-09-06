@@ -5,7 +5,6 @@ import env from "dotenv";
 
 const app = express();
 const port = 3000;
-
 env.config();
 
 const db = new pg.Client({
@@ -17,7 +16,6 @@ const db = new pg.Client({
 });
 
 db.connect();
-
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
