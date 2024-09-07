@@ -50,8 +50,7 @@ app.get("/", async (req, res) => {
   const currentUser = await getCurrentUser();  
 
   res.render("index.ejs", {
-    countries: countries,
-    
+    countries: countries,    
     total: countries.length,
     users: users,
     color: currentUser.color,    
