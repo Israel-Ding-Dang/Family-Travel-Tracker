@@ -36,6 +36,7 @@ async function checkVisited() {
   });  
 
   return countries;    
+  
 }
 
 async function getCurrentUser() {
