@@ -78,7 +78,7 @@ app.post("/add", async (req, res) => {
 
       res.redirect("/");
     } catch (err) {
-      
+
       console.log(err);      
     }
   } catch (err) {    
@@ -94,6 +94,7 @@ app.post("/user", async (req, res) => {
 
     res.redirect("/");
   }
+  
 });
 
 app.post("/new", async (req, res) => {  
