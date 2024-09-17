@@ -96,6 +96,7 @@ app.post("/user", async (req, res) => {
 
     res.redirect("/");
   }  
+  
 });
 
 app.post("/new", async (req, res) => {  
