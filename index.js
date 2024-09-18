@@ -93,8 +93,7 @@ app.post("/user", async (req, res) => {
     currentUserId = req.body.user;
 
     res.redirect("/");
-  }  
-  
+  }    
 });
 
 app.post("/new", async (req, res) => {  
