@@ -22,6 +22,7 @@ app.use(express.static("public"));
 
 let currentUserId = 2;
 
+
 let users = [];
 
 async function checkVisited() {
