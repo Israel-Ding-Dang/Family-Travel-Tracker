@@ -72,6 +72,7 @@ app.post("/add", async (req, res) => {
       [input.toLowerCase()]      
     );
     const data = result.rows[0];
+    
     const countryCode = data.country_code;
 
     try {                  
@@ -87,7 +88,7 @@ app.post("/add", async (req, res) => {
   } catch (err) { 
     console.log(err);    
   }  
-  
+
 });
 
 app.post("/user", async (req, res) => {
