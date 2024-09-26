@@ -58,8 +58,7 @@ app.get("/", async (req, res) => {
     total: countries.length,
     users: users,
     color: currentUser.color,    
-  });
-  
+  });  
 });
 
 app.post("/add", async (req, res) => {
@@ -85,8 +84,7 @@ app.post("/add", async (req, res) => {
     } catch (err) {
       console.log(err);      
     }    
-  } catch (err) {  
-
+  } catch (err) { 
     console.log(err);    
   }  
 });
