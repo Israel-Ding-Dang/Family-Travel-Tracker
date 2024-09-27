@@ -100,8 +100,7 @@ app.post("/user", async (req, res) => {
   }    
 });
 
-app.post("/new", async (req, res) => {  
-  
+app.post("/new", async (req, res) => {    
   //https://www.postgresql.org/docs/current/dml-returning.html
   const {name, color} = req.body;
   
