@@ -70,6 +70,7 @@ app.post("/add", async (req, res) => {
       "SELECT country_code FROM countries WHERE LOWER(country_name) LIKE '%' || $1 || '%';",
       [input.toLowerCase()]       
     );
+    
 
     const data = result.rows[0];    
     const countryCode = data.country_code;
@@ -94,7 +95,7 @@ app.post("/user", async (req, res) => {
   if (req.body.add === "new") {
 
     res.render("new.ejs");  
-    
+
   } else {   
     currentUserId = req.body.user;
 
