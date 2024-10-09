@@ -81,7 +81,6 @@ app.post("/add", async (req, res) => {
       );
 
       res.redirect("/");
-
     } catch (err) {
       console.log(err);      
     }    
