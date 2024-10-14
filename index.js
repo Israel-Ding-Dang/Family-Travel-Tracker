@@ -47,8 +47,7 @@ async function getCurrentUser() {
 };
 
 
-app.get("/", async (req, res) => {
-  
+app.get("/", async (req, res) => {  
   const countries = await checkVisited();
 
   const currentUser = await getCurrentUser();  
