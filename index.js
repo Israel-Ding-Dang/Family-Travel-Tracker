@@ -57,6 +57,7 @@ app.get("/", async (req, res) => {
   res.render("index.ejs", {
     countries: countries,    
     total: countries.length,
+    
     users: users,
     color: currentUser.color, 
   });   
