@@ -47,7 +47,6 @@ async function getCurrentUser() {
   users = result.rows; 
 
   return users.find((user) => user.id == currentUserId);
-
 };
 
 app.get("/", async (req, res) => {  
