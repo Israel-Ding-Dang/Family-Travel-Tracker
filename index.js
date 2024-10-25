@@ -40,7 +40,7 @@ async function checkVisited() {
   }); 
 
   return countries; 
-  
+
 }
 
 async function getCurrentUser() {
@@ -48,6 +48,7 @@ async function getCurrentUser() {
   users = result.rows; 
 
   return users.find((user) => user.id == currentUserId);
+  
 };
 
 app.get("/", async (req, res) => {  
