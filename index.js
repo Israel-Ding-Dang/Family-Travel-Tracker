@@ -85,9 +85,8 @@ app.post("/add", async (req, res) => {
       console.log(err);      
     }  
   } catch (err) { 
-        
-    console.log(err); 
 
+    console.log(err);
   }  
 
 });
