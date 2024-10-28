@@ -59,7 +59,8 @@ app.get("/", async (req, res) => {
     total: countries.length,    
     users: users,
     color: currentUser.color, 
-  });     
+  });  
+     
 });
 
 app.post("/add", async (req, res) => {  
