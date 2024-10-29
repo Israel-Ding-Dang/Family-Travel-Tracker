@@ -70,7 +70,7 @@ app.post("/add", async (req, res) => {
     const result = await db.query(
       "SELECT country_code FROM countries WHERE LOWER(country_name) LIKE '%' || $1 || '%';",
       [input.toLowerCase()]  
-        
+
     );    
 
     const data = result.rows[0];    
@@ -85,7 +85,8 @@ app.post("/add", async (req, res) => {
       res.redirect("/");
 
     } catch (err) {
-      console.log(err);      
+      console.log(err);   
+         
     }  
   } catch (err) { 
 
