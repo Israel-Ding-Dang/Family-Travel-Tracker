@@ -101,6 +101,7 @@ app.post("/user", async (req, res) => {
     currentUserId = req.body.user;
 
     res.redirect("/");
+    
   }
 });
 
