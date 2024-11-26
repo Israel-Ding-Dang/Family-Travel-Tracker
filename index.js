@@ -35,7 +35,6 @@ async function checkVisited() {
   result.rows.forEach((country) => {    
 
     countries.push(country.country_code); 
-
   }); 
 
   return countries;  
@@ -64,7 +63,7 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/add", async (req, res) => { 
-   
+
   const input = req.body["country"];    
   //const currentUser = await getCurrentUser();    
   try {
