@@ -61,7 +61,6 @@ app.get("/", async (req, res) => {
     users: users,
     color: currentUser.color, 
   });
-
 });
 
 app.post("/add", async (req, res) => {  
