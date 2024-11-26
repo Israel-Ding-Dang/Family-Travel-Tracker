@@ -41,6 +41,7 @@ async function checkVisited() {
   return countries;  
 }
 
+
 async function getCurrentUser() {
   const result = await db.query("SELECT * FROM users");  
   users = result.rows; 
