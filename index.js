@@ -38,7 +38,6 @@ async function checkVisited() {
   }); 
 
   return countries;  
-
 }
 
 
