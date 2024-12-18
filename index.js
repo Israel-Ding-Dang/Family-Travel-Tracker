@@ -61,7 +61,7 @@ app.get("/", async (req, res) => {
     users: users,
     color: currentUser.color, 
   });
-  
+
 });
 
 app.post("/add", async (req, res) => { 
@@ -92,6 +92,7 @@ app.post("/add", async (req, res) => {
 
     console.log(err);
   } 
+  
 });
 
 app.post("/user", async (req, res) => {
@@ -121,4 +122,8 @@ app.post("/new", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);   
 });
+
+
+
+
 
