@@ -105,7 +105,7 @@ app.post("/user", async (req, res) => {
 
     res.redirect("/");
   } 
-  
+
 });
 
 app.post("/new", async (req, res) => {    
@@ -124,8 +124,3 @@ app.post("/new", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);   
 });
-
-
-
-
-
