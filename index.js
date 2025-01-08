@@ -83,7 +83,6 @@ app.post("/add", async (req, res) => {
         [countryCode, currentUserId]
 
       );
-
       res.redirect("/");
 
     } catch (err) {
