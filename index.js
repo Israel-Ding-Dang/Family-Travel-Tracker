@@ -90,7 +90,7 @@ app.post("/add", async (req, res) => {
   } catch (err) { 
     console.log(err);
   }   
-      
+
 });
 
 app.post("/user", async (req, res) => {
@@ -102,7 +102,6 @@ app.post("/user", async (req, res) => {
 
     res.redirect("/");
   } 
-
 });
 
 
