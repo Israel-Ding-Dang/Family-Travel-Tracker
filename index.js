@@ -88,6 +88,7 @@ app.post("/add", async (req, res) => {
       console.log(err); 
     }  
   } catch (err) { 
+    
     console.log(err);
   }     
 });
@@ -110,7 +111,7 @@ app.post("/new", async (req, res) => {
   const {name, color} = req.body;
   
   const result = await db.query("INSERT INTO users (name, color) VALUES ($1, $2) RETURNING id;", [name, color]);
-  
+
   const id = result.rows[0].id;
 
   currentUserId = id;
