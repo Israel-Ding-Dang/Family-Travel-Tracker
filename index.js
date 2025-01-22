@@ -102,7 +102,7 @@ app.post("/user", async (req, res) => {
     res.redirect("/");
   } 
 
-  
+
 });
 
 app.post("/new", async (req, res) => {    
@@ -110,6 +110,7 @@ app.post("/new", async (req, res) => {
   const {name, color} = req.body;
   
   const result = await db.query("INSERT INTO users (name, color) VALUES ($1, $2) RETURNING id;", [name, color]);
+  
   const id = result.rows[0].id;
 
   currentUserId = id;
