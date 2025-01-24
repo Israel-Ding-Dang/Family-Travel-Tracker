@@ -87,7 +87,7 @@ app.post("/add", async (req, res) => {
     } catch (err) {
       console.log(err); 
     }  
-    
+
   } catch (err) { 
 
     console.log(err);
@@ -117,6 +117,7 @@ app.post("/new", async (req, res) => {
 
   res.redirect("/");  
 });
+
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);       
